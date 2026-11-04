@@ -8,6 +8,7 @@ DATABASE_URL = "postgresql://azaliavagizova@localhost:5432/moscow_bi"
 engine = create_engine(DATABASE_URL)
 data_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'raw')
 
+
 def get_ind_id(conn, code):
     return conn.execute(text("SELECT indicator_id FROM dim_indicator WHERE code = :c"), {"c": code}).scalar()
 

@@ -4,6 +4,7 @@ from datetime import datetime
 
 Base = declarative_base()
 
+
 # СЛОЙ 1: STAGING (СЫРЫЕ ДАННЫЕ)
 class StgRawData(Base):
     __tablename__ = 'stg_raw_data'
